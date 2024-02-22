@@ -58,7 +58,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         uses: docker/build-push-action@v3
         with:
-        with:
           platforms: linux/386,linux/amd64,linux/arm64,linux/arm/v7
           context: scripts/
           tags: fireflyddt/svbconverter:${{steps.version.outputs.result}}
